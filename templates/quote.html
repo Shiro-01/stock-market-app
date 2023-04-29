@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <div class="form-group" style="display:flex flex-direction:colum align-items: center">
+        <form action="/quote" method="post">
+            <input name="symbol" type="text" autofocus autocomplete="off" placeholder="stock-symbol"  style="height:30px width:250px" >
+            <button type="submit">Qoute</button>
+        </form>
+    </div>
+
+{% endblock %}

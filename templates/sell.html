@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <form action="/sell" method="post">
+        <select name="symbol">
+            <option>choose stock symbol</option>
+
+            {% for symbol in Symbols %}
+            <option>{{symbol["symbol"]}}</option>
+            {% endfor %}
+
+        </select>
+        <input name="shares" type="integar" autofocus autocomplete="off" placeholder="no of shares">
+        <button type="submit">Sell</button>
+    </form>
+{% endblock %}

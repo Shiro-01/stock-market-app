@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    {% if stock != none %}
+        <p>A share of {{stock["name"]}} ({{stock["symbol"]}}) costs {{usd(stock["price"])}} </p>
+    {% endif %}
+{% endblock %}
